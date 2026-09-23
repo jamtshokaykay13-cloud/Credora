@@ -75,7 +75,7 @@ export default function Login() {
         <form onSubmit={handleSubmit} className="form" noValidate>
           <label>
             Username
-            <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="jane_doe" />
+            <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="jamtsho" />
           </label>
 
           {mode === 'signup' && (
@@ -86,7 +86,7 @@ export default function Login() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="jane@example.com"
+                  placeholder="jamtshokayakay13@gmail.com"
                 />
               </label>
               <label>
@@ -95,7 +95,7 @@ export default function Login() {
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="555-1234"
+                  placeholder="17652719"
                 />
               </label>
             </>

@@ -68,13 +68,13 @@
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
 @media (min-width: 640px) {
   .form-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   .form-grid .full {
     grid-column: 1 / -1;
@@ -186,13 +186,13 @@ select:focus {
 /* Template selection */
 .grid-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
 @media (min-width: 640px) {
   .grid-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -314,12 +314,12 @@ select:focus {
 
 .cv-body {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 720px) {
   .cv-body {
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 240px minmax(0, 1fr);
   }
 }
 
@@ -338,6 +338,8 @@ select:focus {
 
 .cv-main {
   padding: 24px;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .cv-sidebar section,
@@ -537,6 +539,8 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .photo-preview {
@@ -562,10 +566,17 @@ select:focus {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
+  flex: 1 1 200px;
 }
 
 .photo-upload-label {
   font-size: 14px;
+  min-width: 0;
+}
+
+.photo-upload-label input[type='file'] {
+  max-width: 100%;
 }
 
 .finalize-question {
