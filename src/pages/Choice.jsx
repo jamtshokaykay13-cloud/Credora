@@ -29,6 +29,11 @@ export default function Choice() {
           <h3>Check Skill Set</h3>
           <p>See what skills are required for a job you're interested in.</p>
         </button>
+        <button className="template-card" onClick={() => navigate('/job-info')}>
+          <div className="template-swatch swatch-classic" />
+          <h3>Job Information</h3>
+          <p>Filter jobs and read what each one focuses on before you tailor your CV.</p>
+        </button>
       </div>
     </div>
   )

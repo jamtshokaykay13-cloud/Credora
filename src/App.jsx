@@ -6,6 +6,7 @@ import Choice from './pages/Choice'
 import CvForm from './pages/CvForm'
 import Preview from './pages/Preview'
 import SkillsCheck from './pages/SkillsCheck'
+import JobInfo from './pages/JobInfo'
 import Done from './pages/Done'
 import './App.css'
 
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/details" element={<RequireAuth><CvForm /></RequireAuth>} />
           <Route path="/preview" element={<RequireAuth><Preview /></RequireAuth>} />
           <Route path="/skills" element={<RequireAuth><SkillsCheck /></RequireAuth>} />
+          <Route path="/job-info" element={<RequireAuth><JobInfo /></RequireAuth>} />
           <Route path="/done" element={<RequireAuth><Done /></RequireAuth>} />
         </Routes>
       </BrowserRouter>
